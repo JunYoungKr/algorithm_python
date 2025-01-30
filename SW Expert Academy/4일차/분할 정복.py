@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 
-# 🔍 이진 탐색 함수 (탐색 방향 변경 체크)
+# 이진 탐색 함수 (탐색 방향 변경 체크)
 def binary_search(arr, target):
     left, right = 0, len(arr) - 1
     prev_direction = None  # 이전 방향 저장 (None, 'left', 'right')
@@ -26,7 +26,7 @@ def binary_search(arr, target):
     
     return found  # 방향 변경이 발생한 경우 True, 아니면 False
 
-# 🔥 메인 실행 코드
+# 메인 실행 코드
 T = int(input().strip())  # 테스트 케이스 개수
 
 for case in range(1, T + 1):
