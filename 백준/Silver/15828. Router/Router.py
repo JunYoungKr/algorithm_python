@@ -11,16 +11,22 @@ N = int(input())
 
 queue = deque()
 
+# 버퍼의 크기를 넘치지 않으면서
 while True:
     num = int(input())
     
     if num == -1:
         break
     
-    elif num == 0:
+    # 입력이 0이라면 popleft()
+    if num == 0:
         queue.popleft()
-    else:
+    # 
+    elif len(queue) < N:
         queue.append(num)
-    
-for i in queue:
-    print(i, end=' ')
+    # print("queue: ", queue)
+if queue:
+    for i in queue:
+        print(i, end=' ')   
+else:
+    print('empty')
